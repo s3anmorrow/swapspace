@@ -10,7 +10,7 @@ interface LoadingOverlayProps {
     spinnerColor:string;
 }
 
-const LoadingOverlay = ({enabled, bgColor, showSpinner, spinnerColor}:LoadingOverlayProps) => {
+export default function LoadingOverlay({enabled, bgColor, showSpinner, spinnerColor}:LoadingOverlayProps) {
     return (
         (enabled)
         ? 
@@ -26,5 +26,3 @@ const LoadingOverlay = ({enabled, bgColor, showSpinner, spinnerColor}:LoadingOve
         : <div></div>
     );
 }
-
-export default LoadingOverlay;

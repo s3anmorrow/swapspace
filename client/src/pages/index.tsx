@@ -19,6 +19,7 @@ export default function Home() {
   };
 
   const getOrders = (e:any) => {
+    console.log("sending data!");
     // fetch the data from the api
     getJSONData(RETRIEVE_SCRIPT, onResponse, onError);
   };

@@ -4,6 +4,7 @@ import { Griffy } from 'next/font/google';
 const griffy = Griffy({weight: "400", subsets: ['latin']});
 
 import { Orders } from "@/tools/orders.model";
+import LoadingOverlay from "@/components/LoadingOverlay";
 
 export default function Home() {
   // retrieve server sided script
@@ -28,6 +29,8 @@ export default function Home() {
   // ---------------------------- rendering to DOM
   return (
     <main className="grid grid-rows-1 grid-cols-1 gap-0 text-content">
+
+      <LoadingOverlay spinnerColor="#FFFFFF" bgColor="#b82308" showSpinner={true} enabled={true} />
 
       <div className="flex flex-nowrap items-center justify-center 
           bg-accent bg-[url('./../lib/images/background.jpg')] bg-no-repeat bg-center bg-cover
